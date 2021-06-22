@@ -10,7 +10,6 @@ export default {
     playerProgress: '0%',
   },
   getters: {
-    // authModalShow: (state) => state.authModalShow,
     playing: (state) => {
       if (state.sound.playing) {
         return state.sound.playing();
@@ -20,7 +19,7 @@ export default {
     },
   },
   mutations: {
-    newSong: (state, payload) => {
+    newSong(state, payload) {
       state.currentSong = payload;
       state.sound = new Howl({
         src: [payload.url],
@@ -34,7 +33,6 @@ export default {
     },
   },
   actions: {
-    // ctx references the store itself, destructuring commit from ctx
     async newSong({ commit, state, dispatch }, payload) {
       if (state.sound instanceof Howl) {
         state.sound.unload();
@@ -64,7 +62,7 @@ export default {
     progress({ commit, state, dispatch }) {
       commit('updatePosition');
 
-      if (state.sound.playing) {
+      if (state.sound.playing()) {
         requestAnimationFrame(() => {
           dispatch('progress');
         });
@@ -76,8 +74,7 @@ export default {
       }
 
       const { x, width } = payload.currentTarget.getBoundingClientRect();
-      // Document = 2000, Timeline = 1000, Click = 1000 at center of document
-      // Distance = 500
+      // Document = 2000, Timeline = 1000, Click = 500, Distance = 500
       const clickX = payload.clientX - x;
       const percentage = clickX / width;
       const seconds = state.sound.duration() * percentage;

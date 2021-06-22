@@ -1,6 +1,7 @@
 import { auth, usersCollection } from '@/includes/firebase';
 
 export default {
+  // namespaced: true,
   state: {
     authModalShow: false,
     userLoggedIn: false,
@@ -9,7 +10,7 @@ export default {
     toggleAuthModal: (state) => {
       state.authModalShow = !state.authModalShow;
     },
-    toggleAuth: (state) => {
+    toggleAuth(state) {
       state.userLoggedIn = !state.userLoggedIn;
     },
   },
@@ -28,7 +29,6 @@ export default {
 
       await userCred.user.updateProfile({
         displayName: payload.name,
-        // profilePicture: null
       });
 
       commit('toggleAuth');
@@ -47,7 +47,12 @@ export default {
     },
     async signout({ commit }) {
       await auth.signOut();
+
       commit('toggleAuth');
+
+      // if (payload.route.meta.requiresAuth) {
+      //   payload.router.push({ name: 'home' });
+      // }
     },
   },
 };
