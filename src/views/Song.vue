@@ -6,8 +6,8 @@
     </div>
     <div class="container mx-auto flex items-center">
       <button type="button" class="z-50 h-24 w-24 text-3xl bg-white text-black rounded-full
-        focus:outline-none" @click.prevent="newSong(song)">
-        <i class="fas fa-play"></i>
+        focus:outline-none" @click.prevent="newSong(song)" >
+        <i class="fas " :class="{ 'fa-play': !playing, 'fa-pause': playing }"></i>
       </button>
       <div class="z-50 text-left ml-8">
         <div class="text-3xl font-bold">{{ song.modified_name }}</div>
@@ -16,7 +16,7 @@
     </div>
   </section>
   <!-- Main Content -->
-  <section class="container mx-auto mt-6">
+  <section class="container mx-auto mt-6" id="comments">
     <div class="bg-white rounded border border-gray-200 relative flex flex-col">
       <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
         <span class="card-title">{{ song.comment_count }}</span>
@@ -73,7 +73,7 @@
 
 <script>
 import { songsCollection, auth, commentsCollection } from '@/includes/firebase';
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'Song',
@@ -165,6 +165,7 @@ export default {
         return new Date(a.datePosted) - new Date(b.datePosted);
       });
     },
+    ...mapGetters(['playing']),
   },
   watch: {
     // persisting the sort selection with query parameters
