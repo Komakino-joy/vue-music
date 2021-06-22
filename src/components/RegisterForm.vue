@@ -14,7 +14,7 @@
     >
     <!-- Name -->
     <div class="mb-3">
-        <label class="inline-block mb-2">Name</label>
+        <label class="inline-block mb-2">{{ $t('register.name') }}</label>
 
         <vee-field
         type="text"
@@ -27,7 +27,7 @@
     </div>
     <!-- Email -->
     <div class="mb-3">
-        <label class="inline-block mb-2">Email</label>
+        <label class="inline-block mb-2">{{ $t('register.email') }}</label>
         <vee-field
         name="email"
         type="email"
@@ -39,7 +39,7 @@
     </div>
     <!-- Age -->
     <div class="mb-3">
-        <label class="inline-block mb-2">Age</label>
+        <label class="inline-block mb-2">{{ $t('register.age') }}</label>
         <vee-field
         name="age"
         type="number"
@@ -50,7 +50,7 @@
     </div>
     <!-- Password -->
     <div class="mb-3">
-        <label class="inline-block mb-2">Password</label>
+        <label class="inline-block mb-2">{{ $t('register.password') }}</label>
         <vee-field
         name="password"
         :bails="false"
@@ -71,7 +71,7 @@
     </div>
     <!-- Confirm Password -->
     <div class="mb-3">
-        <label class="inline-block mb-2">Confirm Password</label>
+        <label class="inline-block mb-2">{{ $t('register.confirm_password') }}</label>
         <vee-field
         name="confirm_password"
         type="password"
@@ -83,7 +83,7 @@
     </div>
     <!-- Country -->
     <div class="mb-3">
-        <label class="inline-block mb-2">Country</label>
+        <label class="inline-block mb-2">{{ $t('register.country') }}</label>
         <vee-field
         as="select"
         name="country"
@@ -105,7 +105,9 @@
         class="w-4 h-4 float-left -ml-6 mt-1 rounded"
         />
         <ErrorMessage class="text-red-600" name="tos" />
-        <label class="inline-block">Accept terms of service</label>
+        <i18n-t class="inline-block" keypath="register.accept" tag="label">
+          <a href="#">{{ $t('register.TOS') }}</a>
+        </i18n-t>
     </div>
     <button
         type="submit"
@@ -113,7 +115,7 @@
         class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition
         hover:bg-purple-700"
     >
-        Submit
+        {{ $t('register.submit') }}
     </button>
     </vee-form>
 </template>

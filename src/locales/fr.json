@@ -1,0 +1,43 @@
+{
+  "login": {
+    "submit": "Soumettre",
+    "email": "Email",
+    "password": "Le mot de passe"
+  },
+  "header": {
+    "login": "S'identifier / S'enregistrer",
+    "about": " À propos",
+    "manage": "Faire en sorte",
+    "logout": " Se déconnecter"
+  },
+  "manage": {
+    "my_songs": " Mes chansons"
+  },
+  "register": {
+    "confirm_password": "Confirmez le mot de passe",
+    "country": "Pays",
+    "password": "Le mot de passe",
+    "name": "Nom",
+    "accept": " J'accepte les {0}",
+    "TOS": " Conditions d'utilisation",
+    "email": "Email",
+    "age": " Âge",
+    "submit": "Soumettre"
+  },
+  "home": {
+    "welcome": "Bienvenue sur votre site musical personnel ! Écoutez et commentez les chansons générées par les utilisateurs. N'hésitez pas à contribuer à votre musique personnelle et  recevoir des commentaires d'autres utilisateurs. Continuez à brouiller!",
+    "listen": "Écoutez de la bonne musique !"
+  },
+  "song": {
+    "comment_count": "Pas de commentaires | 1 commentaire | {count} commentaires"
+  },
+  "upload": {
+    "drop": "Déposez vos fichiers ici",
+    "upload": "Télécharger"
+  },
+  "auth": {
+    "account": " Votre compte",
+    "login": " Connexion",
+    "register": "S'inscrire"
+  }
+}

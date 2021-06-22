@@ -1,0 +1,43 @@
+{
+  "upload": {
+    "upload": "Upload",
+    "drop": "Drop your files here"
+  },
+  "register": {
+    "submit": "Submit",
+    "age": "Age",
+    "email": "Email",
+    "TOS": "Terms of Service",
+    "accept": "I accept Vue-Music's {0}",
+    "name": "Name",
+    "password": "Password",
+    "country": "Country",
+    "confirm_password": "Confirm password"
+  },
+  "home": {
+    "listen": "Listen to great music !",
+    "welcome": "Welcome to your personal music site! Listen to and comment on user-generated songs. Feel free to contribute any of your personal music and  receive feedback from other users. Keep on Jamming!"
+  },
+  "song": {
+    "comment_count": "No comments | 1 Comment | {count} Comments"
+  },
+  "manage": {
+    "my_songs": "My Songs"
+  },
+  "header": {
+    "logout": "Logout",
+    "manage": "Manage",
+    "about": "About",
+    "login": "Login / Register"
+  },
+  "login": {
+    "password": "Password",
+    "email": "Email",
+    "submit": "Submit"
+  },
+  "auth": {
+    "register": "Register",
+    "account": "Your Account",
+    "login": "Login"
+  }
+}
