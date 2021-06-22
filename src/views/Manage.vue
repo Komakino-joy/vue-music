@@ -1,4 +1,5 @@
 <template>
+  <main>
     <!-- Main Content -->
     <section class="container mx-auto mt-6">
         <div class="md:grid md:grid-cols-3 md:gap-4">
@@ -24,6 +25,7 @@
             </div>
         </div>
     </section>
+  </main>
 </template>
 
 <script>
