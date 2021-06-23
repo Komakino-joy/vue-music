@@ -47,7 +47,7 @@ import AppSongItem from '@/components/SongItem.vue';
 import IconSecondary from '@/directives/icon-secondary';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     AppSongItem,
   },
